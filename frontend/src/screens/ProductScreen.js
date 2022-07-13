@@ -1,18 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import {
-  Row,
-  Col,
-  Image,
-  Card,
-  Button,
-  ListGroupItem,
-} from 'react-bootstrap'
+import { Row, Col, Image, Card, Button, ListGroupItem } from 'react-bootstrap'
 import Rating from '../components/Rating'
 import axios from 'axios'
-// import Products from '../Products'
-
-// import products from '../Products'
 
 const ProductScreen = ({ match }) => {
   const [product, setProduct] = useState([])
@@ -24,8 +14,6 @@ const ProductScreen = ({ match }) => {
     }
     fetchProduct()
   }, [match])
-
-  // in order to fetch daat from the backend we need to initaly set the products status as an empty array and by the useEffect fuction we call it as async whice means its need to wait for a response before it's calling it quit and then we declere the {data} varible and call axios get from the url of the id which end by {match.params.id} and we set the product status as the data that we will recvive by navigating to a spesific product, afterwards we call the function
 
   return (
     <>
