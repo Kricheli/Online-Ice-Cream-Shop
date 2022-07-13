@@ -1,6 +1,31 @@
 {
+  "name": "final_project",
+  "version": "1.0.0",
+  "description": "MERN shopping cart app",
+  "main": "server.js",
+  "type":"module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kricheli/final_project.git"
+  },
+  "author": "Kricheli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kricheli/final_project/issues"
+  },
+  "homepage": "https://github.com/Kricheli/final_project#readme",
   "dependencies": {
-    "react-router-bootstrap": "^0.26.2",
-    "react-router-dom": "^5.3.0"
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.2",
+    "nodemon": "^2.0.19"
   }
 }
