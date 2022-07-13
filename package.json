@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "MERN shopping cart app",
   "main": "server.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/Kricheli/final_project#readme",
   "dependencies": {
+    "colors": "^1.4.0",
     "dotenv": "^16.0.1",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "mongoose": "^6.4.4"
   },
   "devDependencies": {
     "concurrently": "^7.2.2",
