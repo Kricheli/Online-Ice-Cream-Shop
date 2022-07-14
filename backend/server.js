@@ -12,10 +12,7 @@ const app = express()
 app.get('/', (req, res) => {
   res.send('Api is running')
 })
-app.use((req, res, next) => {
-  console.log(req.body)
-  next()
-})
+
 app.use('/api/products', productRoutes)
 // app.get('/api/products', (req, res) => {
 //   res.json(products)
