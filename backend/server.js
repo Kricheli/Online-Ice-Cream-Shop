@@ -4,7 +4,6 @@ import connectDB from './config/db.js'
 import colors from 'colors'
 import productRoutes from './routes/productRoutes.js'
 
-//adding the dotnev package
 dotenv.config()
 connectDB()
 
