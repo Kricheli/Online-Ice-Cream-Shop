@@ -5,7 +5,7 @@ import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { logout } from '../actions/userAction'
 
-const Header = () => {
+const Header = ({history}) => {
   const dispatch = useDispatch()
 
   const userLogin = useSelector((state) => state.userLogin)
