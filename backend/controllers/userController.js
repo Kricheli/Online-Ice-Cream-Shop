@@ -163,7 +163,7 @@ export {
   getUserProfile,
   updateUserProfile,
   getUsers,
-  deleteUser,
+  deleteUser, 
   getUserById,
   updateUser,
 }
