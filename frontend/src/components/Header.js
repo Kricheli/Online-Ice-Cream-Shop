@@ -6,6 +6,7 @@ import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { logout } from '../actions/userAction'
 import SearchBox from './SearchBox'
+import '../index.css'
 
 const Header = ({ history }) => {
   const dispatch = useDispatch()
@@ -23,12 +24,13 @@ const Header = ({ history }) => {
       <Navbar bg='dark' variant='dark' expand='lg'>
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand>ProShop</Navbar.Brand>
+            <Navbar.Brand className='logo'>R<span>uby</span> </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
+
           <Navbar.Collapse id='basic-navbar-nav'>
-            <Route render={({history})=> <SearchBox history={history}/>}/>
-            <Nav className='ms-auto'>
+
+          <Nav className='ms-auto'>
               <LinkContainer to='/cart'>
                 <Nav.Link>
                   <i className='fas fa-shopping-cart'></i> Cart
@@ -64,6 +66,9 @@ const Header = ({ history }) => {
                 </NavDropdown>
               )}
             </Nav>
+
+            <Route render={({history})=> <SearchBox history={history}/>}/>
+           
           </Navbar.Collapse>
         </Container>
       </Navbar>
