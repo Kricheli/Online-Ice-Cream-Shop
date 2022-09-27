@@ -1,6 +1,9 @@
 {
   "name": "final_project",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.14.0"
+  },
   "description": "MERN shopping cart app",
   "main": "server.js",
   "type": "module",
