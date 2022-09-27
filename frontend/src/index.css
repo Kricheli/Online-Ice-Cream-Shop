@@ -7,8 +7,12 @@ main {
 h3 {
   padding: 1rem 0;
 }
-h1{
+h1 {
   font-size: 1.4rem;
-  padding:0.5rem
+  padding: 0.5rem;
 }
-
+.cursive-txt {
+  text-transform: lowercase;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 1px 1px 2px rgb(172, 102, 148);
+}
