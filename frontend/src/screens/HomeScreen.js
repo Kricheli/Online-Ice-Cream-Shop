@@ -34,11 +34,12 @@ const HomeScreen = ({ match }) => {
          <p className='sale'>free shipping on orders over $50</p>
         </div>
         <div className='videoContainer'>
-          <video id='video'
+          <video  id='video'
                     src={Video}
-                    autoplay
+                    autoPlay
                     loop
                     muted
+                    playsinline 
                     >
                     Sorry, your browser doesn't support embedded videos,
 
