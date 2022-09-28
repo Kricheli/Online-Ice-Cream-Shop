@@ -2,7 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { LinkContainer } from 'react-router-bootstrap'
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
+import { Navbar, Nav, Container, NavDropdown, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { logout } from '../actions/userAction'
 import SearchBox from './SearchBox'
@@ -21,16 +21,17 @@ const Header = ({ history }) => {
 
   return (
     <header>
-      <Navbar bg='dark' variant='dark' expand='lg'>
+      <Navbar bg='transparent' variant='Secondary' expand='lg'>
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand className='logo'>R<span>uby</span> </Navbar.Brand>
+            <Navbar.Brand className='logo'>
+              <span>D</span>an & <span>G</span>erry
+            </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
-
+          <Route render={({ history }) => <SearchBox history={history} />} />
           <Navbar.Collapse id='basic-navbar-nav'>
-
-          <Nav className='ms-auto'>
+            <Nav className='ms-auto'>
               <LinkContainer to='/cart'>
                 <Nav.Link>
                   <i className='fas fa-shopping-cart'></i> Cart
@@ -66,9 +67,6 @@ const Header = ({ history }) => {
                 </NavDropdown>
               )}
             </Nav>
-
-            <Route render={({history})=> <SearchBox history={history}/>}/>
-           
           </Navbar.Collapse>
         </Container>
       </Navbar>
