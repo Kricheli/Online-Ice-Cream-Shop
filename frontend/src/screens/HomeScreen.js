@@ -36,7 +36,7 @@ const HomeScreen = ({ match }) => {
         <div className='videoContainer'>
           <video id='video'
                     src={Video}
-                    autoPlay
+                    autoplay
                     loop
                     muted
                     >
