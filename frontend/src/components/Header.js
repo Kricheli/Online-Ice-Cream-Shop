@@ -21,7 +21,11 @@ const Header = ({ history }) => {
 
   return (
     <header>
-      <Navbar bg='transparent' variant='Secondary' expand='lg'>
+      <Navbar
+        className='navbar navbar-light bg-light'
+        expand='lg'
+        collapseOnSelect
+      >
         <Container>
           <LinkContainer to='/'>
             <Navbar.Brand className='logo'>
