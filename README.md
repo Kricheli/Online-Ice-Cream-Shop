@@ -1,6 +1,6 @@
 # <img src="https://user-images.githubusercontent.com/100904506/204921580-410bf51c-2fe2-4431-a3b5-870986c95916.png"/> Ice Cream shop React app
 
-## Final Project
+
 <p>
 "Dan & Gerry" is an e-Commerce site built with the MERN stack & Redux.
 This app includes authentication, profiles, products catalog, shopping cart etc. Users can make purchases, review products, rate them. Authenticated admin users can modify products catalog, mark paid orders to delivery, give admin rights regular users. Payment system is developed with PayPal API.
