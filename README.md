@@ -31,3 +31,12 @@ This app includes authentication, profiles, products catalog, shopping cart etc.
  #
 # Overview
 ![merge_from_ofoct](https://user-images.githubusercontent.com/100904506/204920649-5f6d8b52-e34a-4f18-98f3-c186bee528a6.jpg)
+
+<div align="center">
+<p>
+
+ [Live Demo- Dan & Gerry Ice Cream](https://ecommerce-site-practice.herokuapp.com/)
+ 
+  </p>
+  </div>
+
