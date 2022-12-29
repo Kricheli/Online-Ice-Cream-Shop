@@ -17,7 +17,6 @@ This app includes authentication, profiles, products catalog, shopping cart etc.
 # Main Technologies:
 - Full featured shopping cart
 - Product reviews and ratings
-- Top products carousel
 - Product pagination
 - Product search feature
 - User profile with orders
