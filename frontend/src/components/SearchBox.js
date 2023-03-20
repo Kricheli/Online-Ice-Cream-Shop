@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Form, Button, Col } from 'react-bootstrap'
+import '../index.css'
 
 const SearchBox = ({ history }) => {
   const [keyword, setKeyword] = useState('')
@@ -18,9 +19,10 @@ const SearchBox = ({ history }) => {
         style={{ width: 350 }}
         type='text'
         name='q'
+        id='searchbox'
         onChange={(e) => setKeyword(e.target.value)}
-        placeholder='Search Products...'
-        className='ml-sm-5 col '
+        placeholder='ex: Strawberry Topped Tart'
+        className='ml-sm-5 col bg-transparent   '
       ></Form.Control>
       <Button
         type='submit'
@@ -28,7 +30,7 @@ const SearchBox = ({ history }) => {
         className='col '
         style={{ padding: 0, width: 0 }}
       >
-        Search
+  <i class="fa-solid fa-magnifying-glass"></i>
       </Button>
     </Form>
   )

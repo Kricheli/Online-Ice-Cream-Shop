@@ -30,13 +30,25 @@ h1 {
 .logo:hover{
   text-shadow: 8px 6px 7px #f2c1becd;
 }
-.videoContainer {
+.form-control::-webkit-input-placeholder{
+  color: white;
+}
+.videoHeaderContainer {
   width: 100%;
   height: 400px;
 }
-#video {
+#videoHeader {
   width: 100%;
   height: 100%;
+} 
+#video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -3;
 }
 .sale{
   text-align: center;

@@ -6,7 +6,8 @@ import Message from '../components/Message'
 import { listProducts } from '../actions/productAction'
 import Loader from '../components/Loader.js'
 import Paginate from '../components/Paginate.js'
-import Video from '../media/video-header.mp4'
+import Video from '../media/bg-g.mp4'
+import VideoHeader from '../media/video-header.mp4'
 import '../index.css'
 
 const HomeScreen = ({ match }) => {
@@ -36,6 +37,18 @@ const HomeScreen = ({ match }) => {
         <div className='videoContainer'>
           <video  id='video'
                     src={Video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline 
+                    >
+                    Sorry, your browser doesn't support embedded videos,
+
+                </video>
+                </div>
+                <div className='videoHeaderContainer'>
+          <video  id='videoHeader'
+                    src={VideoHeader}
                     autoPlay
                     loop
                     muted

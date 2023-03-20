@@ -22,7 +22,7 @@ const Header = ({ history }) => {
   return (
     <header>
       <Navbar
-        className='navbar navbar-light bg-light'
+        className='navbar navbar-light bg-transparent'
         expand='lg'
         collapseOnSelect
       >
