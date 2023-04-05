@@ -19,7 +19,7 @@ import {
   createProductReview,
 } from '../actions/productAction'
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants'
-
+import '../index.css'
 const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1)
   const [rating, setRating] = useState(0)
@@ -163,7 +163,7 @@ const ProductScreen = ({ history, match }) => {
                     <p className='font-weight-light'>{review.comment}</p>
                   </ListGroupItem>
                 ))}
-                <ListGroupItem>
+                <ListGroupItem className='bg-white'>
                   <h4>Write a custumer review:</h4>
                   {userInfo ? (
                     <Form onSubmit={submitHandler}>
