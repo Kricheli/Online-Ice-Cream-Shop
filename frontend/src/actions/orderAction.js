@@ -36,7 +36,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     }
-    const { data } = await axios.post(`/api/orders`, order, config)
+    const { data } = await axios.post(`https://dan-and-geryys-ice-cream-backend.onrender.co/api/orders`, order, config)
     dispatch({
       type: ORDER_CREATE_SUCCESS,
       payload: data,
@@ -67,7 +67,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     }
-    const { data } = await axios.get(`/api/orders/${id}`, config)
+    const { data } = await axios.get(`https://dan-and-geryys-ice-cream-backend.onrender.co/api/orders/${id}`, config)
     dispatch({
       type: ORDER_DETAILS_SUCCESS,
       payload: data,
@@ -101,7 +101,7 @@ export const payOrder =
         },
       }
       const { data } = await axios.put(
-        `/api/orders/${orderId}/pay`,
+        `https://dan-and-geryys-ice-cream-backend.onrender.co/api/orders/${orderId}/pay`,
         paymentResult,
         config
       )
@@ -135,7 +135,7 @@ export const listMyOrders = () => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     }
-    const { data } = await axios.get(`/api/orders/myorders`, config)
+    const { data } = await axios.get(`https://dan-and-geryys-ice-cream-backend.onrender.co/api/orders/myorders`, config)
     dispatch({
       type: ORDER_LIST_MY_SUCCESS,
       payload: data,
@@ -166,7 +166,7 @@ export const listOrders = () => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     }
-    const { data } = await axios.get(`/api/orders`, config)
+    const { data } = await axios.get(`https://dan-and-geryys-ice-cream-backend.onrender.co/api/orders`, config)
     dispatch({
       type: ORDER_LIST_SUCCESS,
       payload: data,
@@ -199,7 +199,7 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.put(
-      `/api/orders/${order._id}/deliver`,
+      `/https://dan-and-geryys-ice-cream-backend.onrender.co/api/orders/${order._id}/deliver`,
       {},
       config
     )
