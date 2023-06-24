@@ -20,35 +20,37 @@ import {
   PRODUCT_CREATE_REVIEW_FAIL,
 } from '../constants/productConstants'
 
-export const listProducts = (keyword = '', pageNumber = '') => async (
-  dispatch
-) => {
-  try {
-    dispatch({ type: PRODUCT_LIST_REQUEST })
+export const listProducts =
+  (keyword = '', pageNumber = '') =>
+  async (dispatch) => {
+    try {
+      dispatch({ type: PRODUCT_LIST_REQUEST })
 
-    const { data } = await axios.get(
-      `/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
-    )
+      const { data } = await axios.get(
+        `/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+      )
 
-    dispatch({
-      type: PRODUCT_LIST_SUCCESS,
-      payload: data,
-    })
-  } catch (error) {
-    dispatch({
-      type: PRODUCT_LIST_FAIL,
-      payload:
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message,
-    })
+      dispatch({
+        type: PRODUCT_LIST_SUCCESS,
+        payload: data,
+      })
+    } catch (error) {
+      dispatch({
+        type: PRODUCT_LIST_FAIL,
+        payload:
+          error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
+      })
+    }
   }
-}
 
 export const listProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST })
-    const { data } = await axios.get(`/api/products/${id}`)
+    const { data } = await axios.get(
+      `https://dan-and-geryys-ice-cream-backend.onrender.com/api/products/${id}`
+    )
     console.log(data)
     dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data })
   } catch (error) {
@@ -75,7 +77,11 @@ export const createProduct = () => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     }
-    const { data } = await axios.post(`/api/products`, {}, config)
+    const { data } = await axios.post(
+      `https://dan-and-geryys-ice-cream-backend.onrender.com/api/products`,
+      {},
+      config
+    )
 
     dispatch({ type: PRODUCT_CREATE_SUCCESS, payload: data })
   } catch (error) {
@@ -102,7 +108,10 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     }
-    await axios.delete(`/api/products/${id}`, config)
+    await axios.delete(
+      `https://dan-and-geryys-ice-cream-backend.onrender.com/api/products/${id}`,
+      config
+    )
 
     dispatch({ type: PRODUCT_DELETE_SUCCESS })
   } catch (error) {
@@ -131,7 +140,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
       },
     }
     const { data } = await axios.put(
-      `/api/products/${product._id}`,
+      `https://dan-and-geryys-ice-cream-backend.onrender.com/api/products/${product._id}`,
       product,
       config
     )
@@ -163,7 +172,11 @@ export const createProductReview =
           Authorization: `Bearer ${userInfo.token}`,
         },
       }
-      await axios.post(`/api/products/${productId}/reviews`, review, config)
+      await axios.post(
+        `https://dan-and-geryys-ice-cream-backend.onrender.com/api/products/${productId}/reviews`,
+        review,
+        config
+      )
 
       dispatch({ type: PRODUCT_CREATE_REVIEW_SUCCESS })
     } catch (error) {
