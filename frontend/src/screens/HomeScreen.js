@@ -22,6 +22,8 @@ const HomeScreen = ({ match }) => {
   useEffect(() => {
     dispatch(listProducts(keyword, pageNumber))
   }, [dispatch, keyword, pageNumber])
+  console.log(products)
+
   return (
     <>
    
@@ -62,7 +64,7 @@ const HomeScreen = ({ match }) => {
           <Row>
             {products?.map((product) => {
               return (
-                <Col key={product?._id} sm={12} md={6} lg={4} xl={3} className='align-middle'>
+                <Col key={product._id} sm={12} md={6} lg={4} xl={3} className='align-middle'>
                   <Product product={product} />
                 </Col>
               )
