@@ -51,7 +51,7 @@ const HomeScreen = ({ match }) => {
             </video>
           </div>
           <h1 className='header mt-2'>Our Products</h1>
-          <Row>
+          {/* <Row>
             {products?.map((product) => {
               return (
                 <Col
@@ -66,7 +66,7 @@ const HomeScreen = ({ match }) => {
                 </Col>
               )
             })}
-          </Row>
+          </Row> */}
           <Paginate
             pages={pages}
             page={page}
