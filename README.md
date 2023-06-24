@@ -1,4 +1,4 @@
-# <img src="https://user-images.githubusercontent.com/100904506/204921580-410bf51c-2fe2-4431-a3b5-870986c95916.png"/> Ice Cream shop React app
+# <img src="https://user-images.githubusercontent.com/100904506/204921580-410bf51c-2fe2-4431-a3b5-870986c95916.png"/> Ice Cream shop app
 
 
 <p>
