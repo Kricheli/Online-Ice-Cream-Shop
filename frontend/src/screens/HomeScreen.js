@@ -61,7 +61,8 @@ const HomeScreen = ({ match }) => {
                 </video>
                 </div >
       <h1 className='header mt-2'>Our Products</h1>
-          <Row>
+          {products ? (
+            <Row> 
             {products?.map((product) => {
               return (
                 <Col key={product._id} sm={12} md={6} lg={4} xl={3} className='align-middle'>
@@ -70,6 +71,8 @@ const HomeScreen = ({ match }) => {
               )
             })}
           </Row>
+          ):
+          (null)}
           <Paginate
             pages={pages}
             page={page}
